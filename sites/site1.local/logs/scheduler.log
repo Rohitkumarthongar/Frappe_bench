@@ -1,0 +1,700 @@
+2023-11-06 11:40:40,128 ERROR scheduler Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 73, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 110, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 123, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 776, in get_single_value
+    ).run()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
+    self.connect()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 109, in connect
+    self._conn = self.get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 102, in get_connection
+    conn = self._get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in _get_connection
+    return self.create_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 111, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 358, in __init__
+    self.connect()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 664, in connect
+    self._request_authentication()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 954, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user '_03cc9e40ee882297'@'localhost'")
+2023-11-06 11:41:40,394 ERROR scheduler Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 73, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 110, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 123, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 776, in get_single_value
+    ).run()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
+    self.connect()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 109, in connect
+    self._conn = self.get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 102, in get_connection
+    conn = self._get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in _get_connection
+    return self.create_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 111, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 358, in __init__
+    self.connect()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 664, in connect
+    self._request_authentication()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 954, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user '_03cc9e40ee882297'@'localhost'")
+2023-11-06 11:42:40,740 ERROR scheduler Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 73, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 110, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 123, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 776, in get_single_value
+    ).run()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
+    self.connect()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 109, in connect
+    self._conn = self.get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 102, in get_connection
+    conn = self._get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in _get_connection
+    return self.create_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 111, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 358, in __init__
+    self.connect()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 664, in connect
+    self._request_authentication()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 954, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user '_03cc9e40ee882297'@'localhost'")
+2023-11-06 11:45:39,795 ERROR scheduler Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 73, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 110, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 123, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 776, in get_single_value
+    ).run()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
+    self.connect()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 109, in connect
+    self._conn = self.get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 102, in get_connection
+    conn = self._get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in _get_connection
+    return self.create_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 111, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 358, in __init__
+    self.connect()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 664, in connect
+    self._request_authentication()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 954, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user '_03cc9e40ee882297'@'localhost'")
+2023-11-06 11:46:40,129 ERROR scheduler Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 73, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 110, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 123, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 776, in get_single_value
+    ).run()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
+    self.connect()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 109, in connect
+    self._conn = self.get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 102, in get_connection
+    conn = self._get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in _get_connection
+    return self.create_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 111, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 358, in __init__
+    self.connect()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 664, in connect
+    self._request_authentication()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 954, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user '_03cc9e40ee882297'@'localhost'")
+2023-11-06 11:47:40,172 ERROR scheduler Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 73, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 110, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 123, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 776, in get_single_value
+    ).run()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
+    self.connect()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 109, in connect
+    self._conn = self.get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 102, in get_connection
+    conn = self._get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in _get_connection
+    return self.create_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 111, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 358, in __init__
+    self.connect()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 664, in connect
+    self._request_authentication()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 954, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user '_03cc9e40ee882297'@'localhost'")
+2023-11-06 11:48:40,488 ERROR scheduler Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 73, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 110, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 123, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 776, in get_single_value
+    ).run()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
+    self.connect()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 109, in connect
+    self._conn = self.get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 102, in get_connection
+    conn = self._get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in _get_connection
+    return self.create_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 111, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 358, in __init__
+    self.connect()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 664, in connect
+    self._request_authentication()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 954, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user '_03cc9e40ee882297'@'localhost'")
+2023-11-06 11:49:40,699 ERROR scheduler Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 73, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 110, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 123, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 776, in get_single_value
+    ).run()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
+    self.connect()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 109, in connect
+    self._conn = self.get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 102, in get_connection
+    conn = self._get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in _get_connection
+    return self.create_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 111, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 358, in __init__
+    self.connect()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 664, in connect
+    self._request_authentication()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 954, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user '_03cc9e40ee882297'@'localhost'")
+2023-11-06 11:50:40,801 ERROR scheduler Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 73, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 110, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 123, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 776, in get_single_value
+    ).run()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
+    self.connect()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 109, in connect
+    self._conn = self.get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 102, in get_connection
+    conn = self._get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in _get_connection
+    return self.create_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 111, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 358, in __init__
+    self.connect()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 664, in connect
+    self._request_authentication()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 954, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user '_03cc9e40ee882297'@'localhost'")
+2023-11-06 11:51:41,122 ERROR scheduler Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 73, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 110, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 123, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 776, in get_single_value
+    ).run()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
+    self.connect()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 109, in connect
+    self._conn = self.get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 102, in get_connection
+    conn = self._get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in _get_connection
+    return self.create_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 111, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 358, in __init__
+    self.connect()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 664, in connect
+    self._request_authentication()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 954, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user '_03cc9e40ee882297'@'localhost'")
+2023-11-06 11:52:41,333 ERROR scheduler Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 73, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 110, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 123, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 776, in get_single_value
+    ).run()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
+    self.connect()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 109, in connect
+    self._conn = self.get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 102, in get_connection
+    conn = self._get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in _get_connection
+    return self.create_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 111, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 358, in __init__
+    self.connect()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 664, in connect
+    self._request_authentication()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 954, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user '_03cc9e40ee882297'@'localhost'")
+2023-11-06 11:53:41,416 ERROR scheduler Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 73, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 110, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 123, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 776, in get_single_value
+    ).run()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
+    self.connect()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 109, in connect
+    self._conn = self.get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 102, in get_connection
+    conn = self._get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in _get_connection
+    return self.create_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 111, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 358, in __init__
+    self.connect()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 664, in connect
+    self._request_authentication()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 954, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user '_03cc9e40ee882297'@'localhost'")
+2023-11-06 11:54:41,727 ERROR scheduler Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 73, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 110, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 123, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 776, in get_single_value
+    ).run()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
+    self.connect()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 109, in connect
+    self._conn = self.get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 102, in get_connection
+    conn = self._get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in _get_connection
+    return self.create_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 111, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 358, in __init__
+    self.connect()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 664, in connect
+    self._request_authentication()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 954, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user '_03cc9e40ee882297'@'localhost'")
+2023-11-06 11:55:41,827 ERROR scheduler Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 73, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 110, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 123, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 776, in get_single_value
+    ).run()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
+    self.connect()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 109, in connect
+    self._conn = self.get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 102, in get_connection
+    conn = self._get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in _get_connection
+    return self.create_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 111, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 358, in __init__
+    self.connect()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 664, in connect
+    self._request_authentication()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 954, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user '_03cc9e40ee882297'@'localhost'")
+2023-11-06 16:51:47,542 ERROR scheduler Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 73, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 110, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 123, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 776, in get_single_value
+    ).run()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
+    self.connect()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 109, in connect
+    self._conn = self.get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 102, in get_connection
+    conn = self._get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in _get_connection
+    return self.create_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 111, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 358, in __init__
+    self.connect()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 664, in connect
+    self._request_authentication()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 954, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user '_03cc9e40ee882297'@'localhost'")
+2023-11-06 16:52:48,075 ERROR scheduler Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 73, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 110, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 123, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 776, in get_single_value
+    ).run()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
+    self.connect()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 109, in connect
+    self._conn = self.get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 102, in get_connection
+    conn = self._get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in _get_connection
+    return self.create_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 111, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 358, in __init__
+    self.connect()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 664, in connect
+    self._request_authentication()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 954, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user '_03cc9e40ee882297'@'localhost'")
+2023-11-06 16:53:48,291 ERROR scheduler Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 73, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 110, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 123, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 776, in get_single_value
+    ).run()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
+    self.connect()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 109, in connect
+    self._conn = self.get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 102, in get_connection
+    conn = self._get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in _get_connection
+    return self.create_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 111, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 358, in __init__
+    self.connect()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 664, in connect
+    self._request_authentication()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 954, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user '_03cc9e40ee882297'@'localhost'")
+2023-11-06 16:54:49,553 ERROR scheduler Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 73, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 110, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 123, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 776, in get_single_value
+    ).run()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
+    self.connect()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 109, in connect
+    self._conn = self.get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 102, in get_connection
+    conn = self._get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in _get_connection
+    return self.create_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 111, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 358, in __init__
+    self.connect()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 664, in connect
+    self._request_authentication()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 954, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user '_03cc9e40ee882297'@'localhost'")
+2023-11-06 16:55:49,781 ERROR scheduler Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 73, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 110, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 123, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 776, in get_single_value
+    ).run()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
+    self.connect()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 109, in connect
+    self._conn = self.get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 102, in get_connection
+    conn = self._get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in _get_connection
+    return self.create_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 111, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 358, in __init__
+    self.connect()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 664, in connect
+    self._request_authentication()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 954, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user '_03cc9e40ee882297'@'localhost'")
+2023-11-06 16:56:49,881 ERROR scheduler Exception in Enqueue Events for Site site1.local
+Traceback (most recent call last):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 73, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 110, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 123, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 776, in get_single_value
+    ).run()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
+    self.connect()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/database.py", line 109, in connect
+    self._conn = self.get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 102, in get_connection
+    conn = self._get_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in _get_connection
+    return self.create_connection()
+  File "/home/rohit/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 111, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 358, in __init__
+    self.connect()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 664, in connect
+    self._request_authentication()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 954, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/rohit/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user '_03cc9e40ee882297'@'localhost'")

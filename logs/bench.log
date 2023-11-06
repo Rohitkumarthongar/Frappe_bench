@@ -1,0 +1,92 @@
+2023-11-06 11:22:07,907 DEBUG cd frappe-bench && python3 -m venv env
+2023-11-06 11:22:10,097 DEBUG cd frappe-bench && /home/rohit/frappe-bench/env/bin/python -m pip install --quiet --upgrade pip
+2023-11-06 11:22:11,924 DEBUG cd frappe-bench && /home/rohit/frappe-bench/env/bin/python -m pip install --quiet wheel
+2023-11-06 11:22:14,478 LOG Getting frappe
+2023-11-06 11:22:14,478 DEBUG cd frappe-bench/apps && git clone https://github.com/frappe/frappe.git --branch version-15 --depth 1 --origin upstream
+2023-11-06 11:22:19,786 LOG Installing frappe
+2023-11-06 11:22:19,786 DEBUG cd /home/rohit/frappe-bench && /home/rohit/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/rohit/frappe-bench/apps/frappe 
+2023-11-06 11:22:59,883 DEBUG cd /home/rohit/frappe-bench/apps/frappe && yarn install
+2023-11-06 11:23:04,747 DEBUG cd /home/rohit/frappe-bench && sudo supervisorctl restart frappe:
+2023-11-06 11:23:04,915 WARNING cd /home/rohit/frappe-bench && sudo supervisorctl restart frappe: executed with exit code 2
+2023-11-06 11:23:04,916 WARNING restarting supervisor failed. Use `bench restart` to retry.
+2023-11-06 11:23:04,916 DEBUG cd frappe-bench && bench build
+2023-11-06 11:23:05,001 INFO /home/rohit/.local/bin/bench build
+2023-11-06 11:23:18,218 LOG setting up backups
+2023-11-06 11:23:18,227 LOG backups were set up
+2023-11-06 11:23:18,227 INFO Bench frappe-bench initialized
+2023-11-06 11:23:18,877 INFO A newer version of bench is available: 5.18.0 → 5.19.0
+2023-11-06 11:24:01,933 INFO /home/rohit/.local/bin/bench new-site site1.local
+2023-11-06 11:24:54,016 INFO /home/rohit/.local/bin/bench new-site techAdemy.local
+2023-11-06 11:25:56,549 INFO /home/rohit/.local/bin/bench get-app --branch version-15 erpnext
+2023-11-06 11:25:57,398 LOG Getting erpnext
+2023-11-06 11:25:57,398 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-15 --depth 1 --origin upstream
+2023-11-06 11:26:06,238 LOG Installing erpnext
+2023-11-06 11:26:06,350 DEBUG cd /home/rohit/frappe-bench && /home/rohit/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/rohit/frappe-bench/apps/erpnext 
+2023-11-06 11:26:12,118 DEBUG cd /home/rohit/frappe-bench/apps/erpnext && yarn install
+2023-11-06 11:26:12,398 DEBUG bench build --app erpnext
+2023-11-06 11:26:12,474 INFO /home/rohit/.local/bin/bench build --app erpnext
+2023-11-06 11:26:14,753 DEBUG cd /home/rohit/frappe-bench && sudo supervisorctl restart frappe:
+2023-11-06 11:26:14,915 WARNING cd /home/rohit/frappe-bench && sudo supervisorctl restart frappe: executed with exit code 2
+2023-11-06 11:26:14,915 WARNING restarting supervisor failed. Use `bench restart` to retry.
+2023-11-06 11:26:15,316 INFO A newer version of bench is available: 5.18.0 → 5.19.0
+2023-11-06 11:26:17,884 INFO /home/rohit/.local/bin/bench get-app hrms
+2023-11-06 11:26:20,039 LOG Getting hrms
+2023-11-06 11:26:20,039 DEBUG cd ./apps && git clone https://github.com/frappe/hrms.git  --depth 1 --origin upstream
+2023-11-06 11:26:29,605 LOG Installing hrms
+2023-11-06 11:26:29,763 DEBUG cd /home/rohit/frappe-bench && /home/rohit/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/rohit/frappe-bench/apps/hrms 
+2023-11-06 11:26:31,847 DEBUG cd /home/rohit/frappe-bench/apps/hrms && yarn install
+2023-11-06 11:26:32,286 DEBUG bench build --app hrms
+2023-11-06 11:26:32,361 INFO /home/rohit/.local/bin/bench build --app hrms
+2023-11-06 11:26:34,380 DEBUG cd /home/rohit/frappe-bench && sudo supervisorctl restart frappe:
+2023-11-06 11:26:34,541 WARNING cd /home/rohit/frappe-bench && sudo supervisorctl restart frappe: executed with exit code 2
+2023-11-06 11:26:34,541 WARNING restarting supervisor failed. Use `bench restart` to retry.
+2023-11-06 11:26:34,878 INFO A newer version of bench is available: 5.18.0 → 5.19.0
+2023-11-06 11:27:11,265 INFO /home/rohit/.local/bin/bench --site techAdemy.local install-app erpnext
+2023-11-06 11:28:26,185 INFO /home/rohit/.local/bin/bench --site techAdemy.local install-app hrms
+2023-11-06 11:29:25,920 INFO /home/rohit/.local/bin/bench start
+2023-11-06 11:29:26,171 INFO /home/rohit/.local/bin/bench serve --port 8003
+2023-11-06 11:29:26,175 INFO /home/rohit/.local/bin/bench worker
+2023-11-06 11:29:26,186 INFO /home/rohit/.local/bin/bench schedule
+2023-11-06 11:29:26,189 INFO /home/rohit/.local/bin/bench watch
+2023-11-06 11:30:30,042 INFO /home/rohit/.local/bin/bench --site site1.local enable-scheduler
+2023-11-06 11:31:04,123 INFO /home/rohit/.local/bin/bench --site techAdemy.local enable-scheduler
+2023-11-06 11:31:30,824 INFO /home/rohit/.local/bin/bench --site techAdemy.local set-maintenance-mode off
+2023-11-06 11:31:48,437 INFO /usr/local/bin/bench setup production [frappe-user]
+2023-11-06 11:31:48,443 LOG Updated supervisord.conf: 'chmod' changed from '0700                       ; sockef file mode (default 0700)' to '0760'
+2023-11-06 11:31:48,443 LOG Updated supervisord.conf: 'chown' changed from '' to '[frappe-user]:[frappe-user]'
+2023-11-06 11:31:48,490 WARNING /usr/local/bin/bench setup production [frappe-user] executed with exit code 1
+2023-11-06 11:31:49,130 INFO A newer version of bench is available: 5.17.0 → 5.19.0
+2023-11-06 11:32:03,356 INFO /usr/local/bin/bench setup production Admnistrator
+2023-11-06 11:32:03,361 LOG Updated supervisord.conf: 'chmod' changed from '0700                       ; sockef file mode (default 0700)' to '0760'
+2023-11-06 11:32:03,361 LOG Updated supervisord.conf: 'chown' changed from '' to 'Admnistrator:Admnistrator'
+2023-11-06 11:32:14,877 WARNING /usr/local/bin/bench setup production Admnistrator executed with exit code 1
+2023-11-06 11:32:15,545 INFO A newer version of bench is available: 5.17.0 → 5.19.0
+2023-11-06 11:32:24,699 INFO /home/rohit/.local/bin/bench setup nginx
+2023-11-06 11:32:26,408 WARNING /home/rohit/.local/bin/bench setup nginx executed with exit code 1
+2023-11-06 11:32:26,812 INFO A newer version of bench is available: 5.18.0 → 5.19.0
+2023-11-06 11:34:30,580 INFO /home/rohit/.local/bin/bench start
+2023-11-06 11:34:30,835 INFO /home/rohit/.local/bin/bench watch
+2023-11-06 11:34:30,843 INFO /home/rohit/.local/bin/bench worker
+2023-11-06 11:34:30,844 INFO /home/rohit/.local/bin/bench serve --port 8003
+2023-11-06 11:34:30,848 INFO /home/rohit/.local/bin/bench schedule
+2023-11-06 11:34:52,499 INFO /home/rohit/.local/bin/bench --site techAdemy.local install-app hrms
+2023-11-06 11:35:39,475 INFO /home/rohit/.local/bin/bench list.sites
+2023-11-06 11:35:43,975 INFO /home/rohit/.local/bin/bench list.apps
+2023-11-06 11:35:46,351 INFO /home/rohit/.local/bin/bench list.app
+2023-11-06 11:35:52,882 INFO /home/rohit/.local/bin/bench list app
+2023-11-06 11:35:59,040 INFO /home/rohit/.local/bin/bench list.app
+2023-11-06 11:36:05,599 INFO /home/rohit/.local/bin/bench app.list
+2023-11-06 11:39:04,891 INFO /home/rohit/.local/bin/bench --site techAdemy.local install-app hrms
+2023-11-06 11:39:31,111 INFO /home/rohit/.local/bin/bench use techAdemy.local
+2023-11-06 11:39:38,993 INFO /home/rohit/.local/bin/bench start
+2023-11-06 11:39:39,227 INFO /home/rohit/.local/bin/bench watch
+2023-11-06 11:39:39,242 INFO /home/rohit/.local/bin/bench worker
+2023-11-06 11:39:39,264 INFO /home/rohit/.local/bin/bench serve --port 8003
+2023-11-06 11:39:39,265 INFO /home/rohit/.local/bin/bench schedule
+2023-11-06 12:00:01,993 INFO /usr/local/bin/bench --verbose --site all backup
+2023-11-06 12:00:01,999 INFO /home/rohit/.local/bin/bench --verbose --site all backup
+2023-11-06 16:50:46,067 INFO /home/rohit/.local/bin/bench start
+2023-11-06 16:50:46,354 INFO /home/rohit/.local/bin/bench worker
+2023-11-06 16:50:46,355 INFO /home/rohit/.local/bin/bench schedule
+2023-11-06 16:50:46,357 INFO /home/rohit/.local/bin/bench watch
+2023-11-06 16:50:46,368 INFO /home/rohit/.local/bin/bench serve --port 8003
